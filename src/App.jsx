@@ -4,14 +4,14 @@ import React from 'react'
 import Home from './pages/Home'
 import SignIn from './pages/Signin'
 import About from './pages/about'
-import SignOut from './pages/SignUp'
 import SignUp from './pages/SignUp'
 import Profile from './pages/Profile'
-
+import Header from './Components/Header'
 export default function App() {
   return (
     <BrowserRouter>
-    <Routes>
+        <Header/>
+      <Routes>
       <Route path='/' element={<Home />}></Route>
       <Route path='/sign-in' element={<SignIn />}></Route>
       <Route path='/sign-up' element={<SignUp />}></Route>
