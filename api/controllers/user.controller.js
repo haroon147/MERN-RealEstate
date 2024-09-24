@@ -1,5 +1,5 @@
 export const test = (req, res) => {
   res.json({
-    message: "It is comming from controller",
+    message: "i am inside json",
   });
 };
