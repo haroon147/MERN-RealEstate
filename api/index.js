@@ -32,7 +32,12 @@ app.listen(3000, () => {
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
 
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
-  const messageError = "it is server Error";
+  const message = err.message || "it is server Error";
+  return res.status(statusCode).json({
+    sucess: false,
+    statusCode,
+    message,
+  });
 });
