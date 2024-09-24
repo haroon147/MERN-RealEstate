@@ -3,18 +3,13 @@ const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-      required: true,
       unique: true,
+      // unique: [true, "username is unique"],
     },
     email: {
-      type: String,
-      required: true,
-      unique: true,
+      // unique: [true, "email is Unique"],
     },
-    password: {
-      type: String,
-      required: true,
-    },
+    password: {},
   },
   { timestamps: true }
 );
